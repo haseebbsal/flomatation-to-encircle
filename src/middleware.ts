@@ -5,6 +5,7 @@ export default async function middleware(req: NextRequest) {
     const cookie = cookies()
     const accessToken = cookie.get('accessToken')
     const refreshToken = cookie.get('refreshToken')
+    // console.log('okay')
     const locationid = cookie.get('locationid')
     if (!accessToken || !refreshToken || !locationid) {
         return NextResponse.redirect(`https://marketplace.leadconnectorhq.com/oauth/chooselocation?response_type=code&redirect_uri=${process.env.BASE_URL}/api/oauth/callback&client_id=664f3f21e941e37cdd9d3e85-lwj9o1qx&scope=opportunities.readonly opportunities.write contacts.readonly users.readonly`)
