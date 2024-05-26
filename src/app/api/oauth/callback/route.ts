@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
         'grant_type': 'authorization_code',
         'code': code,
         'user_type': 'Location',
-        'redirect_uri': 'http://localhost:8050/oauth/callback'
+        'redirect_uri': `${process.env.BASE_URL}/oauth/callback`
     });
 
     const config = {
