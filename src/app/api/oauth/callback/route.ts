@@ -8,6 +8,7 @@ const qs = require('qs');
 export async function GET(req: NextRequest) {
     const code=req.nextUrl.searchParams.get('code')
     // console.log(req.query.code)
+    // console.log('okay')
     const data = qs.stringify({
         'client_id': "664f3f21e941e37cdd9d3e85-lwj9o1qx",
         'client_secret': "ae6cec39-025e-4b8b-9e7e-138077a30c52",
